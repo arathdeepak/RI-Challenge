@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ri-app-deploy
+spec:
+  selector:
+    app: nxg
+  ports:
+  - protocol: TCP
+    port: 80
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ri-app-deploy
+  labels:
+    app: nxg
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nxg
+  template:
+    metadata:
+      labels:
+        app: nxg
+    spec:
+      containers:
+      - name: nxg
+        image: arathdeepak/helloworld:v2
+        ports:
+        - containerPort: 80
