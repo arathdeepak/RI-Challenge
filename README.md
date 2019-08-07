@@ -3,7 +3,7 @@ RI-Challenge
 
 # Prerequisites:
 
-Make sure you have these installed and configured in your test machine:
+Make sure you have installed and configured these in your test machine:
 1. Git
 2. Docker
 3. Kubectl
@@ -85,7 +85,7 @@ Open localhost in browser or do a curl for the output:
 1. Need to automate the build and deploy jobs via `Jenkins` and `Ansible` or via shell script.
 2. We can pass version-info and replica details from jenkins as variables to the ansible job.
 3. `CI/CD pipe line` and `test cases` can be executed from Jenkins.
-4. `SonarCube` or similar tools can be used to analyze code quality from Jenkins.
+4. `Sonarqube` or similar tools can be used to analyze code quality from Jenkins.
 5. Need to have an external IP and DNS to resolve the web application.
 6. Geo location based `CDN` and an extra caching can be used for static contents.
 7. Need to enable SSL for the domain.
