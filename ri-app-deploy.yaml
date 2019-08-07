@@ -17,7 +17,7 @@ metadata:
   labels:
     app: nxg
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: nxg
@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
       - name: nxg
-        image: arathdeepak/helloworld:v2
+        image: arathdeepak/helloworld:v4
         ports:
         - containerPort: 80
